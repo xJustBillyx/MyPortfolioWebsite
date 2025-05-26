@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+
+.header{
+    width: 1000px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   /* border: 3px solid #000; */ 
+    margin: auto;
+    margin-top: 40px;
+}
+
+.logo{
+    width: 200px;
+    height: 100px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding-top: 30px;
+    font-weight: bold;
+    margin-top: 30px;
+    gap: 50px;
+}
+
+nav ul li a{
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    width: max-content;
+    overflow: hidden;
+}
+
+nav ul li a:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+nav ul li a::before{
+    content: '';
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    bottom: 6px;
+    height: 4px;
+    background: linear-gradient(to right, #03a0f4, #ea0404);
+    border-radius: 4px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: 1;
+    width: auto;
+}
+
+nav ul li a:hover::before{
+    transform: scaleX(1);
+}
+
+.container{
+    position: relative;
+    /* border: 3px solid #000; */
+    width: 1000px;
+    min-height: 500px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.home-grid{
+    display: grid;
+    grid-template-rows: repeat(4, 100px);
+    grid-template-columns: repeat(8, 100px);
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.home-grid img{
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.home-grid a img{
+    height: 100px;
+    width: 100px;
+    margin-top: 40px;
+    margin: 30px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.home-grid a img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(3, 160, 244, 0.2), 0 2px 8px rgba(234, 4, 4, 0.15);
+    border-color: #03a0f4;
+}
+
+.item-1{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.item-3{
+    grid-row-start: 2;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    padding-top: 40px;
+}
+
+.item-2 {
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 5;
+    grid-column-end: 9;
+    margin: auto;
+}
+
+div .item-3{
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+h1{
+    font-size: 3em;
+}
+
+#about{
+    text-align: left;
+}
+
+#about h2{
+    padding-top: 80px;
+    font-size: 4em;
+    margin: 20px;
+}
+
+#about p{
+    margin: 20px;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+#skills h2{
+    padding-top: 30px;
+    font-size: 4em;
+    margin: 20px;
+}
+
+.skill-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+    padding-bottom: 20px;
+}
+
+.skill-item ul li{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    list-style: none;
+    margin: 10px 0;
+    padding: 30px;
+}
+
+.skill-item h3{
+    font-size: 1.5em;
+    padding-top: 10px;
+}
+
+.skill-item{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(3, 160, 244, 0.2), 0 2px 8px rgba(234, 4, 4, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    grid-column: span 4;
+}
+
+#portfolio h2{
+    padding-top: 30px;
+    font-size: 4em;
+    margin: 20px;
+}
+
+.portfolio-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+    padding-bottom: 20px;
+}
+
+.portfolio-item{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(3, 160, 244, 0.2), 0 2px 8px rgba(234, 4, 4, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 200px;
+    width: 100%;
+}
+
+button{
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 10px 10px 20px rgba(3, 160, 244, 0.2), 5px 5px 10px rgba(234, 4, 4, 0.15);
+}
+
+button:hover{
+    background-color: #03a0f4;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(3, 160, 244, 0.2), 0 2px 8px rgba(234, 4, 4, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+footer{
+    width: 1000px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.2em;
+    margin-top: 40px;
+}
+
+#myBtn {
+  position: absolute;
+  display: block; /* Hidden by default */
+  top: 30px; /* Place the button 30px from the bottom */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #000; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/* Responsive styles */
+/* For tablets */
+@media (max-width: 1000px) {
+  .container,
+  .header,
+  footer {
+    width: 95%;
+    min-width: unset;
+    max-width: 100%;
+  }
+  .logo {
+    width: 150px;
+    height: 75px;
+  }
+  #portfolio h2,
+  #skills h2 {
+    font-size: 2.5em;
+  }
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skill-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-grid .item-1 img{
+    height:70px;
+    width: 70px;
+    margin-top: 50px;
+}
+
+    .home-grid{
+    display: block;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 600px) {
+  .container,
+  .header,
+  footer {
+    width: 100%;
+    min-width: unset;
+    max-width: 100%;
+    padding: 0 5px;
+}
+
+  .logo {
+    width: 150px;
+    height: 50px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+    padding-top: 10px;
+    margin-top: 25px;
+  }
+  nav ul li a {
+    padding: 8px 12px;
+    font-size: 1em;
+  }
+  .home-grid{
+    display: block;
+  }
+  .home-grid .item-1 {
+    text-align: center;
+    height: 150px;
+    width: 100%;
+  }
+  .home-grid .item-2 {
+    height: auto;
+    width: auto;
+  }
+  #portfolio h2,
+  #skills h2 {
+    font-size: 1.5em;
+    padding-top: 10px;
+    margin: 10px 5px;
+  }
+  .portfolio-grid {
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px;
+    padding: 0 5px;
+  }
+  .portfolio-item {
+    height: 120px;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .skill-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0 5px;
+  }
+  .skill-item h3 {
+    font-size: 1.1em;
+    padding-top: 5px;
+  }
+  .skill-item {
+    padding: 2px;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  #about h2 {
+    font-size: 2em;
+    padding-top: 30px;
+    margin: 10px 0;
+    margin-left: 15px;
+  }
+  #about p {
+    font-size: 1em;
+    margin: 10px 0;
+    margin-left: 15px;
+  }
+  button {
+    font-size: 1em;
+    padding: 8px 10px;
+  }
+  #myBtn {
+    padding: 10px;
+    font-size: 14px;
+    top: 10px;
+    right: 10px;
+  }
+}

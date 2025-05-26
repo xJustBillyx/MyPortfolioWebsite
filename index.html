@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Billy's Web World</title>
+    <link rel="stylesheet" href="./resources/index.css" />
+  </head>
+  <body>
+    <!--NavBar-->
+
+    <header class="header">
+      <img class="logo" src="./resources/images/brand logo.png" alt="" />
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!--Home Section-->
+      <section id="home">
+        <div class="container">
+          <div class="home-grid">
+            <div class="item-1">
+              <a href="https://x.com/xJustBillyx"
+                ><img
+                  src="./resources/images/11244080_x_twitter_elon musk_twitter new logo_icon.svg"
+                  alt=""
+              /></a>
+              <a href="https://github.com/xJustBillyx"
+                ><img
+                  src="./resources/images/211904_social_github_icon.svg"
+                  alt=""
+              /></a>
+            </div>
+            <img
+              class="item-2"
+              src="/resources/images/William Fell.png"
+              alt=""
+            />
+            <div class="item-3">
+              <h1>Billy Fell</h1>
+              <h2>Let Create For A Better Tomorrow</h2>
+              <p>
+                <br />
+                I am a passionate web developer with a keen interest in creating
+                innovative and user-friendly web applications.
+                <br />
+                <br />
+                Let's build together for a brighter future!
+              </p>
+            </div>
+          </div>
+          <button onclick="topFunction()" id="myBtn" title="Go to top">
+            Top
+          </button>
+        </div>
+      </section>
+      <!--About Section-->
+      <section id="about">
+        <div class="container">
+          <h2>About</h2>
+          <div>
+            <p>
+              Hello there 👋, welcome to my web World. I'm a full-time truck
+              driver and have a real passionate for web develpoment and software
+              engineering. I love to create innovative solutions that make life
+              easier and more enjoyable. My journey in web development has been
+              an enjoyable one, and I am always eager to learn and grow in this
+              field. I believe in the power of technology to transform lives and
+              communities, and I am committed to using my skills to contribute
+              positively to the world.
+              <br />
+              <br />
+              In my free time, I enjoy exploring new technologies, working on
+              personal projects, and contributing to open-source communities. I
+              am always looking for opportunities to collaborate with
+              like-minded individuals and organizations to create impactful
+              solutions.
+              <br />
+              <br />
+              Thank you for visiting my web World! If you have any questions or
+              would like to connect, feel free to reach out to me through my
+              social media links.
+            </p>
+          </div>
+          <button onclick="topFunction()" id="myBtn" title="Go to top">
+            Top
+          </button>
+        </div>
+      </section>
+      <!--Skills Section-->
+      <section id="skills">
+        <div class="container">
+          <h2>Skills</h2>
+          <div class="skill-grid">
+            <div class="skill-item">
+              <h3>Full Stack Web Developer</h3>
+              <ul>
+                <li>HTML</li>
+                <li>I</li>
+                <li>CSS</li>
+                <li>I</li>
+                <li>JavaScript</li>
+                <li>I</li>
+                <li>React</li>
+                <li>I</li>
+                <li>Node.js</li>
+              </ul>
+            </div>
+            <div class="skill-item">
+              <h3>Software Engineer</h3>
+              <ul>
+                <li>Python</li>
+                <li>I</li>
+                <li>C++</li>
+              </ul>
+            </div>
+          </div>
+          <button onclick="topFunction()" id="myBtn" title="Go to top">
+            Top
+          </button>
+        </div>
+      </section>
+      <!--Portfolio Section-->
+      <section id="portfolio">
+        <div class="container">
+          <h2>Portfolio</h2>
+          <div class="portfolio-grid">
+            <div class="portfolio-item">
+              <button><h3>Click Here</h3></button>
+            </div>
+            <div class="portfolio-item">
+              <button><h3>Click Here</h3></button>
+            </div>
+            <div class="portfolio-item">
+              <button><h3>Click Here</h3></button>
+            </div>
+            <div class="portfolio-item">
+              <button><h3>Click Here</h3></button>
+            </div>
+            <div class="portfolio-item">
+              <button><h3>Click Here</h3></button>
+            </div>
+            <div class="portfolio-item">
+              <button><h3>Click Here</h3></button>
+            </div>
+          </div>
+          <button onclick="topFunction()" id="myBtn" title="Go to top">
+            Top
+          </button>
+        </div>
+      </section>
+      <!--Footer Section-->
+      <footer class="footer">
+        <div>
+          <p>&copy; 2025 Billy's Web World. All rights reserved.</p>
+        </div>
+      </footer>
+    </main>
+  </body>
+
+  <script>
+    // Get the button:
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+  </script>
+</html>
