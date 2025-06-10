@@ -236,8 +236,22 @@ h1{
     transition: transform 0.3s, box-shadow 0.3s;
     height: 200px;
     width: 100%;
+    display: flex;              /* Add this */
+    flex-direction: column;     /* Stack children vertically */
+    justify-content: flex-end;  /* Push content to the bottom */
+    align-items: center;        /* Center horizontally */
 }
 
+.portfolio-item button{
+    background-color: #03a0f4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.75em;
+    transition: background-color 0.3s, transform 0.3s;
+}
 button{
     background-color: #fff;
     color: #000;
@@ -259,9 +273,10 @@ button:hover{
 }
 
 footer{
-    width: 1000px;
+    width: auto;
     height: 100px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: auto;
@@ -297,7 +312,7 @@ footer{
   .container,
   .header,
   footer {
-    width: 95%;
+    width: auto;
     min-width: unset;
     max-width: 100%;
   }
@@ -332,7 +347,7 @@ footer{
   .container,
   .header,
   footer {
-    width: 100%;
+    width: auto;
     min-width: unset;
     max-width: 100%;
     padding: 0 5px;
