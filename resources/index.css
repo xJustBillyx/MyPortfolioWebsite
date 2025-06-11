@@ -353,6 +353,13 @@ footer{
   .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .portfolio-item img{
+    height: 190px;
+    width: 350px;
+    object-fit: fill;
+  }
+
   .skill-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -377,12 +384,13 @@ footer{
     min-width: unset;
     max-width: 100%;
     padding: 0 5px;
-}
+  }
 
   .logo {
     width: 150px;
     height: 50px;
   }
+
   nav ul {
     flex-direction: column;
     gap: 35px;
@@ -390,22 +398,27 @@ footer{
     padding-top: 10px;
     margin-top: 25px;
   }
+
   nav ul li a {
     padding: 8px 12px;
     font-size: 1em;
   }
+
   .home-grid{
     display: block;
   }
+
   .home-grid .item-1 {
     text-align: center;
     height: 150px;
     width: 100%;
   }
+
   .home-grid .item-2 {
-    height: auto;
+    height: 450px;
     width: auto;
   }
+
   #portfolio h2,
   #skills h2 {
     font-size: 1.5em;
@@ -424,6 +437,23 @@ footer{
     text-align: center;
     flex-wrap: wrap;
   }
+
+  .portfolio-item img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* existing styles */
+    width: 170px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  figcaption p{
+    font-size: 0.8rem;
+  }
+
   .skill-grid {
     grid-template-columns: 1fr;
     gap: 10px;
@@ -434,8 +464,25 @@ footer{
     padding-top: 5px;
   }
   .skill-item {
-    padding: 2px;
+    padding: 1px;
+    margin: 20px;
   }
+
+  .skill-item ul {
+    padding: 0;
+    margin: 0;
+}
+
+  .skill-item ul li{
+    display: block;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 500;
+    list-style: none;
+    margin: 8px 0;
+    padding: 10px 0;
+  }
+
   h1 {
     font-size: 2em;
   }
@@ -459,5 +506,6 @@ footer{
     font-size: 14px;
     top: 10px;
     right: 10px;
+    margin-top: 0;
   }
 }
