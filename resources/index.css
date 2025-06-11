@@ -242,6 +242,16 @@ h1{
     align-items: center;        /* Center horizontally */
 }
 
+.portfolio-item img {
+    width: 29%;
+    height: 33%;
+    object-fit: cover;
+    border-radius: 5px;
+    position: static; /* Ensure the image is positioned normally */
+    position: absolute; /* Position the image absolutely */
+    z-index: 0; /* Ensure the image is behind the button */
+}
+
 .portfolio-item button{
     background-color: #03a0f4;
     color: #fff;
@@ -252,6 +262,7 @@ h1{
     font-size: 0.75em;
     transition: background-color 0.3s, transform 0.3s;
 }
+
 button{
     background-color: #fff;
     color: #000;
@@ -262,15 +273,29 @@ button{
     font-size: 1.2em;
     transition: background-color 0.3s, transform 0.3s;
     box-shadow: 10px 10px 20px rgba(3, 160, 244, 0.2), 5px 5px 10px rgba(234, 4, 4, 0.15);
+    z-index: 99; /* Ensure button is above other elements */
+    position: relative; /* Position relative to allow z-index to work */
+    margin: 20px auto; /* Center the button */;
+}
+
+button a{
+    color: inherit; /* Inherit color from button */
+    text-decoration: none; /* Remove underline */
 }
 
 button:hover{
-    background-color: #03a0f4;
+    background-color: #ea0404;
     color: #fff;
     transform: translateY(-2px);
     box-shadow: 0 4px 20px rgba(3, 160, 244, 0.2), 0 2px 8px rgba(234, 4, 4, 0.15);
     transition: transform 0.3s, box-shadow 0.3s;
+
 }
+
+figcaption{
+    position: absolute;
+    color: #fff;
+  }
 
 footer{
     width: auto;
