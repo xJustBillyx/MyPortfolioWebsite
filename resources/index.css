@@ -416,8 +416,8 @@ footer{
 
   .home-grid .item-2 {
     height: 450px;
-    width: auto;
-    overflow: hidden;
+    width: 400px;
+    display: block;
   }
 
   #portfolio h2,
