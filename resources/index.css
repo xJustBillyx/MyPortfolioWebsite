@@ -250,6 +250,7 @@ h1{
     position: static; /* Ensure the image is positioned normally */
     position: absolute; /* Position the image absolutely */
     z-index: 0; /* Ensure the image is behind the button */
+    object-fit: fill;
 }
 
 .portfolio-item button{
